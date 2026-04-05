@@ -13,17 +13,17 @@ export default function Footer() {
         <div className="name flex flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row sm:justify-self-start">
           <Link
             href="/"
-            className="text-[1.9rem] font-extrabold tracking-tighter text-slate-100 transition-colors duration-150 hover:text-yellow-400 md:text-[2.1rem]"
+            className="text-[1.55rem] font-extrabold tracking-tighter text-slate-100 transition-colors duration-150 hover:text-yellow-400 md:text-[1.7rem]"
           >
             {settings.name}
           </Link>
           <span
-            className="hidden text-6xl font-extralight leading-[0] text-slate-400 sm:inline"
+            className="hidden text-5xl font-extralight leading-[0] text-slate-400 sm:inline"
             aria-hidden={true}
           >
             /
           </span>
-          <p className="text-lg text-slate-300 md:text-xl">
+          <p className="text-base text-slate-300 md:text-lg">
             © {new Date().getFullYear()} {settings.name}
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function Footer() {
                 <li>
                   <Link
                     className={clsx(
-                      "group relative block overflow-hidden rounded px-3 py-1 text-xl font-bold text-slate-100 transition-colors duration-150 hover:hover:text-yellow-400 md:px-4 md:text-2xl",
+                      "group relative block overflow-hidden rounded px-3 py-1 text-lg font-bold text-slate-100 transition-colors duration-150 hover:hover:text-yellow-400 md:px-4 md:text-xl",
                     )}
                     href={href}
                   >
@@ -43,7 +43,7 @@ export default function Footer() {
                 </li>
                 {index < settings.navItems.length - 1 && (
                   <span
-                    className="text-5xl font-thin leading-[0] text-slate-400"
+                    className="text-4xl font-thin leading-[0] text-slate-400"
                     aria-hidden="true"
                   >
                     /
@@ -62,7 +62,7 @@ export default function Footer() {
               href={item.href}
               target="_blank"
               rel="noreferrer"
-              className="p-2 text-[2.35rem] text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400 md:text-[2.6rem]"
+              className="p-2 text-[2rem] text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400 md:text-[2.2rem]"
               aria-label={settings.name + " on GitHub"}
             >
               <FaGithub />
@@ -77,7 +77,7 @@ export default function Footer() {
               href={item.href}
               target="_blank"
               rel="noreferrer"
-              className="p-2 text-[2.35rem] text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400 md:text-[2.6rem]"
+              className="p-2 text-[2rem] text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400 md:text-[2.2rem]"
               aria-label={settings.name + " on LinkedIn"}
             >
               <FaLinkedin />

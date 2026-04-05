@@ -17,10 +17,10 @@ export default function Heading({
     <Comp
       className={clsx(
         "font-bold leading-tight tracking-tight  text-slate-300",
-        size === "xl" && "text-[5.5rem] md:text-[10.5rem]",
-        size === "lg" && "text-[4.75rem] md:text-[9.25rem]",
-        size === "md" && "text-[4.25rem] md:text-[7.25rem]",
-        size === "sm" && "text-[2.6rem] md:text-[5.2rem]",
+        size === "xl" && "text-[4.9rem] md:text-[9.2rem]",
+        size === "lg" && "text-[4.2rem] md:text-[8.1rem]",
+        size === "md" && "text-[3.8rem] md:text-[6.4rem]",
+        size === "sm" && "text-[2.3rem] md:text-[4.4rem]",
         className,
       )}
     >

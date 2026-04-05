@@ -45,7 +45,7 @@ export default function RootLayout({
     <html lang="en" className="bg-slate-900">
       <body
         suppressHydrationWarning
-        className={clsx(urbanist.className, "relative min-h-screen text-[18px]")}
+        className={clsx(urbanist.className, "relative min-h-screen text-[16px] md:text-[17px]")}
       >
         <Header />
         {children}
