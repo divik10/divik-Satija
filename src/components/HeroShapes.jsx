@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 
 export function Shapes() {
   return (
-    <div className="row-span-1 row-start-1 mx-auto -mt-2 w-full max-w-[470px] scale-[0.9] md:col-span-1 md:col-start-2 md:mr-[0.25rem] md:mt-0 md:max-w-[620px] md:scale-[0.98] lg:mr-[-1rem] lg:max-w-[710px] lg:scale-[1.06] xl:mr-[-1.5rem] xl:max-w-[780px] xl:scale-[1.1]">
+    <div className="row-span-1 row-start-1 mx-auto -mt-6 w-full max-w-[470px] scale-[0.9] md:col-span-1 md:col-start-2 md:mr-[0.25rem] md:-mt-8 md:max-w-[620px] md:scale-[0.98] lg:mr-[-1rem] lg:max-w-[710px] lg:scale-[1.06] xl:mr-[-1.5rem] xl:max-w-[780px] xl:scale-[1.1]">
       <div className="aspect-square">
         <Canvas
           className="z-0"

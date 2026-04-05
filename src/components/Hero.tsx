@@ -62,10 +62,10 @@ export default function Hero({
     ));
 
   return (
-    <Bounded ref={component} className="pt-8 md:pt-14">
-      <div className="grid min-h-[78vh] grid-cols-1 items-center gap-6 md:grid-cols-[0.92fr,1.08fr] lg:gap-2">
+    <Bounded ref={component} className="pt-4 md:pt-8">
+      <div className="grid min-h-[74vh] grid-cols-1 items-center gap-6 md:grid-cols-[0.92fr,1.08fr] lg:gap-2">
         <Shapes />
-        <div className="col-start-1 md:row-start-1">
+        <div className="col-start-1 -mt-4 md:row-start-1 md:-mt-8">
           <h1
             className="mb-8 text-[clamp(4.1rem,17vw,9.4rem)] font-extrabold leading-[0.82] tracking-tighter md:text-[clamp(5.6rem,11vw,10.2rem)] xl:text-[clamp(6.2rem,11.5vw,11rem)]"
             aria-label={`${firstName} ${lastName}`}
