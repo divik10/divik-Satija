@@ -16,7 +16,7 @@ export default function TextBlock({ text }: TextBlockProps) {
             href={part}
             target="_blank"
             rel="noreferrer"
-            className="font-semibold text-yellow-300 underline underline-offset-4 transition-colors duration-150 hover:text-yellow-200"
+            className="break-all font-semibold text-yellow-300 underline underline-offset-4 transition-colors duration-150 hover:text-yellow-200 sm:break-words"
           >
             {part}
           </a>
@@ -32,7 +32,7 @@ export default function TextBlock({ text }: TextBlockProps) {
       {text.map((paragraph) => (
         <p
           key={paragraph}
-          className="mb-8 text-[1.7rem] leading-[1.45] md:text-[2.05rem] lg:text-[2.2rem]"
+          className="mb-8 break-words text-[1.7rem] leading-[1.45] md:text-[2.05rem] lg:text-[2.2rem]"
         >
           {renderParagraph(paragraph)}
         </p>
