@@ -24,7 +24,7 @@ export default function NavBar({
 
   return (
     <nav aria-label="Main navigation">
-      <ul className="flex flex-col justify-between rounded-b-lg bg-slate-50 px-3 py-2.5 md:m-2 md:flex-row md:items-center md:rounded-xl md:px-5 md:py-3.5 lg:px-6">
+      <ul className="flex flex-col justify-between rounded-b-lg bg-slate-50 px-3 py-2 md:m-2 md:flex-row md:items-center md:rounded-xl md:px-4 md:py-3 lg:px-5">
         <div className="flex items-center justify-between">
           <NameLogo name={name} />
           <button
@@ -55,7 +55,7 @@ export default function NavBar({
               <li className="first:mt-8">
                 <Link
                   className={clsx(
-                    "group relative block overflow-hidden rounded px-3 py-1 text-[2.35rem] font-bold text-slate-900 ",
+                    "group relative block overflow-hidden rounded px-3 py-1 text-[2rem] font-bold text-slate-900 ",
                   )}
                   href={href}
                   onClick={() => setOpen(false)}
@@ -106,7 +106,7 @@ function NameLogo({ name }: { name: string }) {
     <Link
       href="/"
       aria-label="Home page"
-      className="text-[1.65rem] font-extrabold tracking-tighter text-slate-900 md:text-[1.7rem]"
+      className="text-[1.45rem] font-extrabold tracking-tighter text-slate-900 md:text-[1.5rem]"
     >
       {name}
     </Link>
@@ -131,7 +131,7 @@ function DesktopMenu({
           <li>
             <Link
               className={clsx(
-                "group relative block overflow-hidden rounded px-3 py-2 text-base font-bold text-slate-900 lg:px-4 lg:text-lg",
+                "group relative block overflow-hidden rounded px-3 py-2 text-[0.95rem] font-bold text-slate-900 lg:px-4 lg:text-base",
               )}
               href={href}
               aria-current={pathname === href ? "page" : undefined}

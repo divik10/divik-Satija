@@ -67,7 +67,7 @@ export default function Hero({
         <Shapes />
         <div className="col-start-1 md:row-start-1">
           <h1
-            className="mb-10 text-[clamp(4.8rem,20vw,10.8rem)] font-extrabold leading-[0.82] tracking-tighter md:text-[clamp(6.4rem,12.8vw,11.8rem)] xl:text-[clamp(7rem,13vw,12.8rem)]"
+            className="mb-8 text-[clamp(4.1rem,17vw,9.4rem)] font-extrabold leading-[0.82] tracking-tighter md:text-[clamp(5.6rem,11vw,10.2rem)] xl:text-[clamp(6.2rem,11.5vw,11rem)]"
             aria-label={`${firstName} ${lastName}`}
           >
             <span className="block text-slate-300">
@@ -77,7 +77,7 @@ export default function Hero({
               {renderLetters(lastName, "last")}
             </span>
           </h1>
-          <span className="job-title block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-[1.45rem] font-bold uppercase tracking-[.22em] text-transparent opacity-100 md:text-[1.95rem] xl:text-[2.15rem]">
+          <span className="job-title block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-[1.25rem] font-bold uppercase tracking-[.2em] text-transparent opacity-100 md:text-[1.7rem] xl:text-[1.85rem]">
             {tagLine}
           </span>
         </div>

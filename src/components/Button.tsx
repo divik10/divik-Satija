@@ -24,7 +24,7 @@ export default function Button({
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noreferrer" : undefined}
       className={clsx(
-        "group relative flex w-fit items-center justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50 px-4 py-2.5 text-[0.95rem] font-bold transition-transform ease-out hover:scale-105 md:px-5 md:py-3 md:text-base",
+        "group relative flex w-fit items-center justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50 px-4 py-2 text-[0.88rem] font-bold transition-transform ease-out hover:scale-105 md:px-4.5 md:py-2.5 md:text-[0.95rem]",
         className,
       )}
     >
