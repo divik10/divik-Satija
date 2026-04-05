@@ -1,35 +1,33 @@
 import { MetadataRoute } from "next";
-import { createClient } from "@/prismicio";
+import { siteData } from "@/data";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const client = createClient();
-  const homepage = await client.getSingle("homepage");
-  const pages = await client.getAllByType("page");
-  //const blogPosts = await client.getAllByType("blog_post");
-  const projects = await client.getAllByType("project");
-
-  const siteRoot = "https://demo.com";
+  const siteRoot = siteData.siteUrl;
 
   const homepageRoute = {
     url: siteRoot,
-    lastModified: homepage.last_publication_date,
+    lastModified: siteData.projects[0]?.date ?? new Date().toISOString(),
   };
 
-  const pagesRoutes = pages.map((page) => ({
+  const pagesRoutes = siteData.pages.map((page) => ({
     url: siteRoot + "/" + page.uid,
-    lastModified: page.last_publication_date,
+    lastModified: new Date().toISOString(),
   }));
 
- // const blogPostsRoutes = blogPosts.map((post) => ({
-  //  url: siteRoot + "/blog/" + post.uid,
- //   lastModified: post.last_publication_date,
-//  }));
+  const projectsIndexRoute = {
+    url: siteRoot + "/projects",
+    lastModified: new Date().toISOString(),
+  };
 
-  const projectsRoutes = projects.map((project) => ({
-    url: siteRoot + "/project/" + project.uid,
-    lastModified: project.last_publication_date,
+  const projectsRoutes = siteData.projects.map((project) => ({
+    url: siteRoot + "/projects/" + project.uid,
+    lastModified: project.date,
   }));
 
-  {/*...blogPostsRoutes,*/}
-  return [homepageRoute, ...pagesRoutes, ...projectsRoutes];
+  return [
+    homepageRoute,
+    ...pagesRoutes,
+    projectsIndexRoute,
+    ...projectsRoutes,
+  ];
 }

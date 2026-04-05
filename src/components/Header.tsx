@@ -1,14 +1,18 @@
 import React from "react";
-import { createClient } from "@/prismicio";
 
 import NavBar from "@/components/NavBar";
+import { siteData } from "@/data";
 
-export default async function Header() {
-  const client = createClient();
-  const settings = await client.getSingle("settings");
+export default function Header() {
+  const settings = siteData.settings;
   return (
-    <header className="top-0 z-50 mx-auto max-w-7xl md:sticky md:top-4">
-      <NavBar settings={settings} />
+    <header className="top-0 z-50 mx-auto max-w-[1920px] md:sticky md:top-4">
+      <NavBar
+        name={settings.name}
+        navItems={settings.navItems}
+        ctaLabel={settings.ctaLabel}
+        ctaLink={settings.ctaLink}
+      />
     </header>
   );
 }

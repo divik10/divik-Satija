@@ -1,27 +1,30 @@
-import { PrismicNextLink } from "@prismicio/next";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import clsx from "clsx";
-import { KeyTextField, LinkField } from "@prismicio/client";
+import Link from "next/link";
 
 type ButtonProps = {
-  linkField: LinkField;
-  label: KeyTextField;
+  link: string;
+  label: string;
   showIcon?: boolean;
   className?: string;
 };
 
 export default function Button({
-  linkField,
+  link,
   label,
   showIcon = true,
   className,
 }: ButtonProps) {
+  const isExternal = link.startsWith("http") || link.startsWith("mailto:");
+
   return (
-    <PrismicNextLink
-      field={linkField}
+    <Link
+      href={link}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noreferrer" : undefined}
       className={clsx(
-        "group relative flex w-fit items-center justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50  px-4 py-2 font-bold transition-transform ease-out  hover:scale-105",
+        "group relative flex w-fit items-center justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50 px-5 py-3 text-base font-bold transition-transform ease-out hover:scale-105 md:px-6 md:py-3.5 md:text-lg",
         className,
       )}
     >
@@ -33,6 +36,6 @@ export default function Button({
       <span className="relative flex items-center justify-center gap-2">
         {label} {showIcon && <MdArrowOutward className="inline-block" />}
       </span>
-    </PrismicNextLink>
+    </Link>
   );
 }
