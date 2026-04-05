@@ -434,4 +434,5 @@ export const siteData = {
       ] satisfies ArticleSection[],
     },
   ] satisfies ContentItem[],
+  blogPosts: [] satisfies ContentItem[],
 };

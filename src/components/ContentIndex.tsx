@@ -10,8 +10,9 @@ export default function ContentIndex({
   viewMore,
   fallbackItemImage,
 }: ContentIndexSection) {
-  const items = siteData.projects;
-  const urlPrefix = "/projects";
+  const items =
+    contentType === "Blog" ? siteData.blogPosts : siteData.projects;
+  const urlPrefix = contentType === "Blog" ? "/blog" : "/projects";
 
   return (
     <Bounded>
@@ -19,14 +20,9 @@ export default function ContentIndex({
         {heading}
       </Heading>
       {description.length > 0 && (
-        <div className="mb-14 max-w-[72rem] text-slate-300">
+        <div className="prose prose-2xl md:prose-[2rem] prose-invert mb-14 max-w-4xl text-slate-300">
           {description.map((paragraph) => (
-            <p
-              key={paragraph}
-              className="text-[1.8rem] leading-[1.45] md:text-[2.15rem] lg:text-[2.35rem]"
-            >
-              {paragraph}
-            </p>
+            <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
       )}

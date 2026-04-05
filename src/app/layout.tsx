@@ -1,6 +1,6 @@
 import "./globals.css";
 import clsx from "clsx";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Urbanist } from "next/font/google";
 
 import Footer from "@/components/Footer";
@@ -8,6 +8,11 @@ import Header from "@/components/Header";
 import { siteData } from "@/data";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -45,7 +50,7 @@ export default function RootLayout({
     <html lang="en" className="bg-slate-900">
       <body
         suppressHydrationWarning
-        className={clsx(urbanist.className, "relative min-h-screen text-[15px] md:text-[16px]")}
+        className={clsx(urbanist.className, "relative min-h-screen antialiased")}
       >
         <Header />
         {children}
